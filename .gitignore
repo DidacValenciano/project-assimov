@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -172,3 +173,8 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+=======
+__pycache__/
+*.pyc
+outputs/
+>>>>>>> 2d5cddd (Primera estructura funcional del projecte Assimov)

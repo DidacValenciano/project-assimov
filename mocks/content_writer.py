@@ -1,0 +1,1 @@
+# Simula fragments de contingut

@@ -1,0 +1,1 @@
+# Simula traducció a LaTeX

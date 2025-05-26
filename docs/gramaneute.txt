@@ -1,0 +1,69 @@
+El Gramaneute, o "bon pastor" (de llm's) - Prompt per indicar l'estructura d'un script de python.
+
+Un "bon pastor" escolta el prompt de l'usuari, i envia aquest prompt a un llm, el qual li  suggerix una definició dels rols funcionals, i tria de llm's de cada rol, en funció del prompt original. Quins models s'hi ajusten més a cada un, és una cosa que el bon pastor tria en funció de les possibilitats, físiques i econòmiques de l'usuari. El "bon pastor" mostra a l'usuari un resum de com es durà a terme l'empresa sol·licitada en el prompt original. I si l'usuari no ho ha indicat, el "bon pastor" li indica quina quantitat de seccions de primer nivell es preveu que hi hagi i quantes pàgines per secció, i en total a l'usuari, segons el que el "bon pastor" ha trobia adient, aixì com el que li han negociatn els diversos llm de rols funcionals. L'usuari pot fer algun retoc, per ajustar la situació al seu gust, i indicar "seguir" amb el procés; o para si així fos tant necessari.
+
+Al següent pas el "bon pastor" contacta de nou amb un llm amb la informació anterior, i aquest li retorna uns yalm's generals del text amb ambientació, target, estil narratiu, aix´i com una yaml per cada secció de primer nivell on s'hi detallen títol, l'estructura completa de l'esquelet d'aquella secció de primer nivell (amb tots els títols) així com temes, frases o punts clau, habilitats específiques (gràfics, taules, pies, dibuixos dal·le, escenes de sexe, ...) objectiu que s'aconsegueix, etc, coses  que proporcionen els distints rols abans esmentats. El "bon pastor" els ensenya a l'usuari. El "bon pastor" sempre demana la llengua de sortida del text a l'usuari, si aquest no ho ha fet abans, per evitar sorpreses.
+
+Una vegada revisat per l'usuari tota aquesta estructura, i fet algún retoc pertinent per a agradar més a l'usuari, el "bon pastor" demana les claus dels distints llocs on hi ha els "bons llm's" amb una aproximació del cost i la durada que tendrà aquest procés. Si les claus ja eren introduides amb anterioritat, es limitarà a demanar permís i a informar del cost aproximat. Ni l'usuari ni el "bon pastor" volen un sistema local, per que ja fa prou calor a Mallorca i l'energia aquí és cara.
+
+El "bon pastor" suggereix que si s'usa caches pot augmentar el preu però millora la qualitat, i que cap la possibilitat de fer feina en paral·lel sense perdre massa qualitat, i per tant ser més ràpid, però no més bo. L'usuari tria com s'estima més que es cuini la nostra empresa, amb aquestes opcions de temps, costs afegits, rendiments i finura de resultats. El "bon pastor" envia els corresponents yaml's a les caches, amb el beneplàcit de l'usuari, i s'encarrega d'orquestrar la concurrència i/o seqüència entre els llms i escriptura en el fitxer .tex dels diferents fragments de contingut que, finalment, li fa arribar un "bon traductor" i/o "estilista purista" per si cal cap retoc final.
+
+En acabar l'usuari, fet de carn i ossos, reb de la ma del "bon pastor", fet de codi python, un document .tex. S'encaixen les mans i es despedeixen.
+
+*Orientativament els rols funcionals serien:
+flux_generacio_multimodel:
+  - etapa: "Entrada de tema"
+    nodes:
+      - A: "Entrada de tema / objectiu narratiu"
+
+  - etapa: "Anàlisi i preparació"
+    nodes:
+      - B: "Redactor especialista en continguts factuals"
+      - C: "Tècnic de redacció formal i científica"
+      - D: "Adaptador al registre i context comunicatiu"
+    connexions: ["A -> B", "A -> C", "A -> D"]
+
+  - etapa: "Creació narrativa i estètica"
+    nodes:
+      - E: "Escriptor d’estil narratiu amb veu pròpia"
+      - F: "Empatitzador amb el perfil lector"
+      - G: "Generador de seducció emocional o ideològica"
+      - H: "Creatiu expressiu i metafòric"
+    connexions:
+      - "B -> E"
+      - "C -> E"
+      - "D -> E"
+      - "E -> F"
+      - "E -> G"
+      - "E -> H"
+
+  - etapa: "Coherència i estructura"
+    nodes:
+      - I: "Supervisor de coherència narrativa"
+      - J: "Argumentador rigorós i estructurat"
+      - K: "Gestor de tonalitat emocional i ideològica"
+    connexions:
+      - "F -> I"
+      - "G -> I"
+      - "H -> I"
+      - "I -> J"
+      - "I -> K"
+
+  - etapa: "Refinament i format"
+    nodes:
+      - L: "Generalitzador abstractiu i sintètic"
+      - M: "Especialista en detall significatiu"
+      - N: "Optimitzador de fluïdesa sintàctica"
+      - O: "Modulador de lèxic segons registre"
+      - P: "Terminòleg de precisió conceptual"
+      - Q: "Formatejador segons norma"
+    connexions:
+      - "J -> L"
+      - "K -> L"
+      - "L -> M"
+      - "M -> N"
+      - "N -> O"
+      - "O -> P"
+      - "P -> Q"
+
+Tot i que més d'un es pot fusionar segons la naturalesa de contingut que vol generar l'usuari.
