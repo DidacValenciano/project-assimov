@@ -1,7 +1,6 @@
 # Project Assimov
 
 **Core engine:** `grammarnaut` (also known as `gramaneute`)  
-**Local path:** `/home/didac/gen.AI/assimov/`
 
 ---
 
