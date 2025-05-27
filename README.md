@@ -18,12 +18,35 @@ The central engine, `grammarnaut`, acts as a semiotic compiler that transforms c
 
 ## 🛠️ Project Structure
 
+```
 assimov/
-├── grammarnaut/ # Core engine module
-├── prompts/ # Prompt templates and discourse structures
-├── docs/ # Technical and philosophical documentation
-├── tests/ # Engine and logic tests
-└── README.md
+├── grammarnaut/                # Core engine module
+│   ├── __init__.py             # Module initializer
+│   ├── engine.py               # Main generation logic
+│   ├── tokenizer.py            # Custom token handling
+│   ├── discourse_planner.py    # Structure and coherence engine
+│   └── utils.py                # Helper functions
+│
+├── prompts/                    # Prompt templates and discourse structures
+│   ├── base_templates.json     # Universal prompt templates
+│   ├── narrative_modes.yaml    # Descriptive styles and roles
+│   └── task_prompts.md         # Examples of prompts by task
+│
+├── docs/                       # Technical and philosophical documentation
+│   ├── philosophy.md           # Conceptual foundation and homage to Asimov
+│   ├── architecture.md         # System design and module flow
+│   └── api_reference.md        # Usage and integration guide
+│
+├── tests/                      # Engine and logic tests
+│   ├── test_engine.py          # Unit tests for core engine
+│   ├── test_planner.py         # Tests for discourse logic
+│   └── fixtures/               # Sample inputs and expected outputs
+│       └── sample_prompt.json
+│
+├── LICENSE                     # Open-source license (e.g., GPLv3)
+├── README.md                   # Project overview and setup
+└── requirements.txt            # Python dependencies
+```
 
 ---
 
