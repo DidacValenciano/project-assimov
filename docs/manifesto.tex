@@ -49,12 +49,12 @@
 
 \newtcblisting{metaoutput}{
 	listing only,
-	title=github.com/nassaba/project-assimov - AI-enhanced content generation pipeline,
+	title=github.com/nassaba-ai/project-assimov - AI-enhanced Content Generation Pipeline,
 	coltitle=black,
 	breakable,
 	enhanced,
 	colback=white,
-	colframe=gray!80!black,
+	colframe=white!75!black,
 	sharp corners,
 	listing options={
 		basicstyle=\ttfamily\small,
@@ -173,10 +173,7 @@ So that we, \emph{teachers}, have our own tools — ready for the battle that li
 
 We got all the weapons we need: Now fight!  \hfill\textit{(Sucker Punch — 2011)}
 
-				
-			
-			
-			\section*{\texttt{AI-enhanced LaTeX generation pipeline}}
+\newpage
 			
 			\begin{metaoutput}
 # Phase 0: Interpret prompt and assign roles with grammarnaut + llm_router
@@ -191,15 +188,12 @@ We got all the weapons we need: Now fight!  \hfill\textit{(Sucker Punch — 2011
 
 # Phase 5 (optional): Final stylistic polish by purist LLM or human reviewer
 
-# CONFIGURATION
-# Load API key (replace with your secure method)
+###################################################
+# AI-enhanced Content Generation Pipeline (Assimov)
 
 import openai
 from pathlib import Path
 import time
-
-				
-# AI-enhanced content generation pipeline (Assimov)
 
 def phase_0_prompt_intake():
     """Receive user prompt and determine functional roles + LLMs."""
@@ -255,8 +249,9 @@ if __name__ == "__main__":
     refined = phase_3_refine_coherence(raw_content)
     tex = phase_4_compile_tex(refined)
     final_output = phase_5_final_review(tex)
-    save(final_output, "output/document.tex")
-				
+    save(final_output, "output/document.tex")			
 			\end{metaoutput}
-			
+\noindent
+\textit{This work is licensed under a Creative Commons Attribution – NonCommercial – ShareAlike 4.0 International License (CC BY-NC-SA 4.0).}\\
+\url{https://creativecommons.org/licenses/by-nc-sa/4.0/}			
 		\end{document}

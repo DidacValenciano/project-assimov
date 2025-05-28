@@ -49,12 +49,12 @@
 
 \newtcblisting{metaoutput}{
 	listing only,
-	title=github.com/nassaba/project-assimov - AI-enhanced content generation pipeline,
+	title=github.com/nassaba-ai/project-assimov - AI-enhanced Content Generation Pipeline,
 	coltitle=black,
 	breakable,
 	enhanced,
 	colback=white,
-	colframe=gray!80!black,
+	colframe=white!75!black,
 	sharp corners,
 	listing options={
 		basicstyle=\ttfamily\small,
@@ -137,88 +137,84 @@
 				El que ve tot seguit és una altra implementació. Una que, com els algoritmes d’\emph{OpenAI}, s’estira, s’adapta i reorganitza la seva pròpia estructura per generar, de manera purament probabilística, una resposta òptima a la situació que té al davant: crear de manera eficient contingut didàctic, un article, un llibre. Tot plegat perquè nosaltres, \emph{professors}, puguem disposar de les nostres pròpies armes per a la batalla que ens espera.
 				
 			
-			
-			\section*{\texttt{AI-enhanced LaTeX generation pipeline}}
-			
-			\begin{metaoutput}
-# Phase 0: Interpret prompt and assign roles with gramaneute + llm_router
+\newpage
 
+\begin{metaoutput}
+# Phase 0: Interpret prompt and assign roles with grammarnaut + llm_router
+	
 # Phase 1: Generate structural skeleton with yaml_generator using Claude or o3 or ...
-
+	
 # Phase 2: Expand each section with role-assigned LLMs (GPT-4o, MythoMax, Lit-6B...) using cached YAMLs
-
+	
 # Phase 3: Review narrative coherence, argument and tone with o3 or Claude using section context
-
+	
 # Phase 4: Compile formatted output into .tex with writer or translator
-
+	
 # Phase 5 (optional): Final stylistic polish by purist LLM or human reviewer
-
-# CONFIGURATION
-# Load API key (replace with your secure method)
-
+	
+###################################################
+# AI-enhanced Content Generation Pipeline (Assimov)
+	
 import openai
 from pathlib import Path
 import time
-
-				
-# AI-enhanced content generation pipeline (Assimov)
-
+	
 def phase_0_prompt_intake():
-    """Receive user prompt and determine functional roles + LLMs."""
-    prompt = user_input()
-    roles = assign_roles(prompt)  # via gramaneute.py -> llm_router.py
-    llms = select_models(roles, config="config.yaml")
-    return plan(roles, llms)
-
+	"""Receive user prompt and determine functional roles + LLMs."""
+	prompt = user_input()
+	roles = assign_roles(prompt)  # via gramaneute.py -> llm_router.py
+	llms = select_models(roles, config="config.yaml")
+	return plan(roles, llms)
+	
 def phase_1_generate_structure(plan):
-    """Create YAML skeleton per section with titles, themes, targets."""
-    yamls = []
-    for section in plan.sections:
-    yamls.append(generate_yaml(section))  # via yaml_generator.py or real LLM
-    return yamls
-
+	"""Create YAML skeleton per section with titles, themes, targets."""
+	yamls = []
+	for section in plan.sections:
+		yamls.append(generate_yaml(section))  # via yaml_generator.py or real LLM
+	return yamls
+	
 def phase_2_expand_sections(yamls):
-    """Expand each section via assigned LLM, using cached context."""
-    content = []
-    for yaml in yamls:
-        llm = yaml.assigned_model
-        section_text = expand_from_yaml(yaml, llm=llm, use_cache=True)
-        content.append(section_text)
-    return content
-
+	"""Expand each section via assigned LLM, using cached context."""
+	content = []
+	for yaml in yamls:
+		llm = yaml.assigned_model
+		section_text = expand_from_yaml(yaml, llm=llm, use_cache=True)
+		content.append(section_text)
+	return content
+	
 def phase_3_refine_coherence(content):
-    """Polish narrative flow, argument structure, and tonal coherence."""
-    polished = []
-    for section in content:
-        coherent = enforce_coherence(section)  # coherence supervisor
-        refined = polish_argument(coherent)
-        toned = adjust_tone(refined)
-        polished.append(toned)
-    return polished
-
+	"""Polish narrative flow, argument structure, and tonal coherence."""
+	polished = []
+	for section in content:
+		coherent = enforce_coherence(section)  # coherence supervisor
+		refined = polish_argument(coherent)
+		toned = adjust_tone(refined)
+		polished.append(toned)
+	return polished
+	
 def phase_4_compile_tex(polished):
-    """Format polished content into a .tex document with structure."""
-    doc = initialize_tex()
-    for section in polished:
-        doc.append(format_section(section))  # via writer.py or translator.py
-    return doc
-
+	"""Format polished content into a .tex document with structure."""
+	doc = initialize_tex()
+	for section in polished:
+		doc.append(format_section(section))  # via writer.py or translator.py
+	return doc
+	
 def phase_5_final_review(tex_document):
-    """Optional: stylistic and poetic pass by a purist LLM or human."""
-    reviewed = manual_review(tex_document)
-    return reviewed
-
-# Main pipeline execution
-
+	"""Optional: stylistic and poetic pass by a purist LLM or human."""
+	reviewed = manual_review(tex_document)
+	return reviewed
+	
+	# Main pipeline execution
+	
 if __name__ == "__main__":
-    plan = phase_0_prompt_intake()
-    yamls = phase_1_generate_structure(plan)
-    raw_content = phase_2_expand_sections(yamls)
-    refined = phase_3_refine_coherence(raw_content)
-    tex = phase_4_compile_tex(refined)
-    final_output = phase_5_final_review(tex)
-    save(final_output, "output/document.tex")
-				
-			\end{metaoutput}
-			
-		\end{document}
+	plan = phase_0_prompt_intake()
+	yamls = phase_1_generate_structure(plan)
+	raw_content = phase_2_expand_sections(yamls)
+	refined = phase_3_refine_coherence(raw_content)
+	tex = phase_4_compile_tex(refined)
+	final_output = phase_5_final_review(tex)
+	save(final_output, "output/document.tex")				
+\end{metaoutput}
+\noindent
+\textit{Aquest text està llicenciat sota una Llicència Creative Commons Reconeixement – No Comercial – Compartir Igual 4.0 Internacional (CC BY-NC-SA 4.0).}\\ \url{https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca}
+\end{document}

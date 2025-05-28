@@ -54,4 +54,5 @@ flux_generation_multimodel:
       - "N -> O"
       - "O -> P"
       - "P -> Q"
-# Esquema de rols i connexions
+
+Licensed under the GNU General Public License v3.0 (GPLv3). See LICENSE file for details.

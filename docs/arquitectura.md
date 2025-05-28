@@ -1,1 +1,0 @@
-# Descripció funcional del sistema
