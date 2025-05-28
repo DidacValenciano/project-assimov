@@ -1,6 +1,6 @@
 # Project Assimov
 
-**Core engine:** `grammarnaut` (also known as `gramaneute`)  
+**Core engine:** `grammanaut` (also known as `gramaneute`)
 
 ---
 
