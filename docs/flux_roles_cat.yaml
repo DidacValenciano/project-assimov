@@ -1,0 +1,55 @@
+flux_generacio_multimodel:
+  - etapa: "Entrada de tema"
+    nodes:
+      - A: "Entrada de tema / objectiu narratiu"
+
+  - etapa: "Anàlisi i preparació"
+    nodes:
+      - B: "Redactor especialista en continguts factuals"
+      - C: "Tècnic de redacció formal i científica"
+      - D: "Adaptador al registre i context comunicatiu"
+    connexions: ["A -> B", "A -> C", "A -> D"]
+
+  - etapa: "Creació narrativa i estètica"
+    nodes:
+      - E: "Escriptor d’estil narratiu amb veu pròpia"
+      - F: "Empatitzador amb el perfil lector"
+      - G: "Generador de seducció emocional o ideològica"
+      - H: "Creatiu expressiu i metafòric"
+    connexions:
+      - "B -> E"
+      - "C -> E"
+      - "D -> E"
+      - "E -> F"
+      - "E -> G"
+      - "E -> H"
+
+  - etapa: "Coherència i estructura"
+    nodes:
+      - I: "Supervisor de coherència narrativa"
+      - J: "Argumentador rigorós i estructurat"
+      - K: "Gestor de tonalitat emocional i ideològica"
+    connexions:
+      - "F -> I"
+      - "G -> I"
+      - "H -> I"
+      - "I -> J"
+      - "I -> K"
+
+  - etapa: "Refinament i format"
+    nodes:
+      - L: "Generalitzador abstractiu i sintètic"
+      - M: "Especialista en detall significatiu"
+      - N: "Optimitzador de fluïdesa sintàctica"
+      - O: "Modulador de lèxic segons registre"
+      - P: "Terminòleg de precisió conceptual"
+      - Q: "Formatejador segons norma"
+    connexions:
+      - "J -> L"
+      - "K -> L"
+      - "L -> M"
+      - "M -> N"
+      - "N -> O"
+      - "O -> P"
+      - "P -> Q"
+

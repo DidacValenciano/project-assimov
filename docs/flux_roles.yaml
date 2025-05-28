@@ -1,1 +1,57 @@
+# flux_roles.yaml
+
+flux_generation_multimodel:
+  - stage: "Topic intake"
+    nodes:
+      - A: "Topic intake / narrative objective"
+
+  - stage: "Analysis and preparation"
+    nodes:
+      - B: "Writer specialized in factual content"
+      - C: "Technician for formal and scientific writing"
+      - D: "Adapter to register and communicative context"
+    connections: ["A -> B", "A -> C", "A -> D"]
+
+  - stage: "Narrative and aesthetic creation"
+    nodes:
+      - E: "Writer with narrative voice"
+      - F: "Empathizer with the reader’s profile"
+      - G: "Generator of emotional or ideological seduction"
+      - H: "Expressive and metaphorical creative"
+    connections:
+      - "B -> E"
+      - "C -> E"
+      - "D -> E"
+      - "E -> F"
+      - "E -> G"
+      - "E -> H"
+
+  - stage: "Coherence and structure"
+    nodes:
+      - I: "Supervisor of narrative coherence"
+      - J: "Structured and rigorous argument builder"
+      - K: "Emotional and ideological tone manager"
+    connections:
+      - "F -> I"
+      - "G -> I"
+      - "H -> I"
+      - "I -> J"
+      - "I -> K"
+
+  - stage: "Refinement and formatting"
+    nodes:
+      - L: "Abstract generalizer and synthesizer"
+      - M: "Specialist in significant detail"
+      - N: "Syntactic fluency optimizer"
+      - O: "Lexical modulator according to register"
+      - P: "Precise terminology handler"
+      - Q: "Formatter according to standards"
+    connections:
+      - "J -> L"
+      - "K -> L"
+      - "L -> M"
+      - "M -> N"
+      - "N -> O"
+      - "O -> P"
+      - "P -> Q"
 # Esquema de rols i connexions

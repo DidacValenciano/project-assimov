@@ -1,0 +1,262 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{inconsolata} % Font monoespaiada agradable
+\usepackage[dvipsnames]{xcolor} % Colors macos
+\usepackage{tcolorbox}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=MidnightBlue, urlcolor=MidnightBlue}
+\usepackage{fancyvrb} % per mostrar codi
+
+\definecolor{mykeyword}{rgb}{0.0, 0.5, 0.0}       % verd per a keywords
+\definecolor{mytype}{rgb}{1.0, 0.65, 0.0} % groc taronja fort
+
+
+\definecolor{myfunction}{rgb}{0.0, 0.4, 0.7}       % blau per a noms de funció
+\definecolor{myconst}{rgb}{0.6, 0.1, 0.1}          % vermell fosc per a constants
+% Bloc de codi configurat amb colors
+\usepackage{listings}
+\lstset{
+	inputencoding=utf8,
+	extendedchars=true,
+	literate=
+	{à}{{\`a}}1
+	{è}{{\`e}}1
+	{é}{{\'e}}1
+	{í}{{\'i}}1
+	{ï}{{\"i}}1
+	{ò}{{\`o}}1
+	{ó}{{\'o}}1
+	{ú}{{\'u}}1
+	{ü}{{\"u}}1
+	{ç}{{\c{c}}}1
+	{ñ}{{\~n}}1
+	{Á}{{\'A}}1
+	{É}{{\'E}}1
+	{Í}{{\'I}}1
+	{Ï}{{\"I}}1
+	{Ó}{{\'O}}1
+	{Ú}{{\'U}}1
+	{Ü}{{\"U}}1
+	{¿}{{?``}}1
+	{¡}{{!``}}1
+}
+\usepackage{tcolorbox}
+
+\tcbuselibrary{listings, skins, breakable}
+
+
+\newtcblisting{metaoutput}{
+	listing only,
+	title=github.com/nassaba/project-assimov - AI-enhanced content generation pipeline,
+	coltitle=black,
+	breakable,
+	enhanced,
+	colback=white,
+	colframe=gray!80!black,
+	sharp corners,
+	listing options={
+		basicstyle=\ttfamily\small,
+		keywordstyle=\color{mykeyword}\bfseries,
+		stringstyle=\color{BurntOrange},
+		commentstyle=\color{gray},
+		identifierstyle=\color{black},
+		emph={phase_0_prompt_intake, phase_1_generate_structure,
+			phase_2_expand_sections, phase_3_refine_coherence,
+			phase_4_compile_tex, phase_5_final_review},
+		emphstyle=\color{myfunction},
+		emph={[2]Path, plan, tex, yamls},
+		emphstyle={[2]\color{mytype}},
+		emph={[3]True, False, None},
+		emphstyle={[3]\color{myconst}},
+		morekeywords={import, from, def, return, if, else, class, for, while},
+		numbers=left,
+		numberstyle=\tiny\color{gray},
+		numbersep=5pt,
+		xleftmargin=2.2em,
+		breaklines=true
+	}
+}
+
+\definecolor{mygray}{gray}{0.45}
+\definecolor{mygreen}{rgb}{0,0.5,0}
+\definecolor{myorange}{rgb}{0.8,0.4,0}
+
+\title{}
+\author{}
+\date{}
+
+\begin{document}
+
+
+\noindent
+\ttfamily
+\textcolor{mygreen}{\textbackslash documentclass}\textcolor{black}{[12pt,a4paper]\{article\}}\\
+\textcolor{mygreen}{\textbackslash usepackage}\textcolor{black}{[utf8]\{inputenc\}}\\
+\textcolor{mygreen}{\textbackslash usepackage}\textcolor{black}{[english]\{babel\}}\\
+\textcolor{mygreen}{\textbackslash usepackage}\textcolor{black}{[margin=2.5cm]\{geometry\}}\\
+\textcolor{mygreen}{\textbackslash usepackage}\textcolor{black}{\{inconsolata\}} \textcolor{mygray}{\%\ Pleasant monospaced font}\\
+\textcolor{mygreen}{\textbackslash usepackage}\textcolor{black}{\{hyperref\}}\\
+\textcolor{mygreen}{\textbackslash hypersetup}\textcolor{black}{\{colorlinks=true, linkcolor=MidnightBlue, urlcolor=MidnightBlue\}}\\
+\textcolor{mygreen}{\textbackslash usepackage}\textcolor{black}{\{fancyvrb\}} \textcolor{mygray}{\%\ for displaying code}
+
+\medskip
+
+\noindent\textcolor{mygreen}{\textbackslash title}\textcolor{black}{\{PROJECT ASSIMOV: A Manifesto for Educators in the Age of Transformers\}}\\
+\textcolor{mygreen}{\textbackslash author}\textcolor{black}{\{Dídac Valenciano Gener\}}\\
+\textcolor{mygreen}{\textbackslash date}\textcolor{black}{\{May 2025\}}
+
+\medskip
+
+\noindent\textcolor{mygreen}{\textbackslash begin}\textcolor{black}{\{document\}}\\
+\textcolor{mygreen}{\textbackslash section*}\textcolor{black} \{\sffamily 2025 is — and will be — the year of ChatGPT.\}\\
+
+				
+\medskip
+
+In Iberian and Mediterranean Europe —still shaped by a latent mecha subconscious— \emph{Mazinger Z} left a cultural and emotional imprint that marked an entire generation. For those aged 45 to 60, it’s all still there: the battle cry “\emph{¡Puños fuera!}”, the survival of \emph{Blandiblú}, the \emph{Famobil Clicks}, and afternoons filled with violent cartoons — without turning into psychopaths.
+
+\medskip
+
+In the United States, \emph{Hasbro} led a generational shift with the rise of the \emph{Transformers}. The saga hit its cultural peak in 2007, when, in the opening scenes, the \emph{Decepticons} attacked a U.S. military base in the Qatari desert.
+
+\medskip
+
+\emph{Megan Fox} and \emph{Shia LaBeouf} stole the spotlight — but something else stayed with us.
+
+\medskip
+
+A small \emph{Decepticon} — a \emph{Transformer}, but one of the bad ones — hides in plain sight among the protagonists’ things. It absorbs metal, mutates, stretches, elongates, adapts. Until it becomes what it needs to be.
+
+\bigskip
+
+Ten years later, as the result of a long research journey — by both academic and private entities — and in parallel with the entertainment world, \emph{Google} publicly introduced, in 2017, an algorithmic technology.
+
+\medskip
+
+One that replicates itself. Stretches. Expands its own structure. Modifies and elongates — until, purely by probability, it reaches its goal.
+
+\medskip
+
+What a surprise — and what a coincidence — that this technology, previously unknown, was named: \emph{transformers}.
+
+\bigskip
+
+And the beauty of it, my friends, is this: it simulates so well.
+
+\medskip
+
+If we define \emph{artificial intelligence} as a functional simulation of intelligence... well, there might be other implementations.
+
+\medskip
+
+But this one — definitely — is one.
+
+\bigskip
+
+What follows is another implementation.
+
+\medskip
+
+One that, like the algorithms from \emph{OpenAI}, stretches, adapts, and reshapes itself — all to generate, in a purely probabilistic way, the best possible answer to the task ahead.
+
+\medskip
+
+In this case? Creating content. Didactic material. Articles. Maybe even a book.
+
+\medskip
+
+So that we, \emph{teachers}, have our own tools — ready for the battle that lies ahead.  
+
+\medskip
+
+We got all the weapons we need: Now fight!  \hfill\textit{(Sucker Punch — 2011)}
+
+				
+			
+			
+			\section*{\texttt{AI-enhanced LaTeX generation pipeline}}
+			
+			\begin{metaoutput}
+# Phase 0: Interpret prompt and assign roles with grammarnaut + llm_router
+
+# Phase 1: Generate structural skeleton with yaml_generator using Claude or o3 or ...
+
+# Phase 2: Expand each section with role-assigned LLMs (GPT-4o, MythoMax, Lit-6B...) using cached YAMLs
+
+# Phase 3: Review narrative coherence, argument and tone with o3 or Claude using section context
+
+# Phase 4: Compile formatted output into .tex with writer or translator
+
+# Phase 5 (optional): Final stylistic polish by purist LLM or human reviewer
+
+# CONFIGURATION
+# Load API key (replace with your secure method)
+
+import openai
+from pathlib import Path
+import time
+
+				
+# AI-enhanced content generation pipeline (Assimov)
+
+def phase_0_prompt_intake():
+    """Receive user prompt and determine functional roles + LLMs."""
+    prompt = user_input()
+    roles = assign_roles(prompt)  # via gramaneute.py -> llm_router.py
+    llms = select_models(roles, config="config.yaml")
+    return plan(roles, llms)
+
+def phase_1_generate_structure(plan):
+    """Create YAML skeleton per section with titles, themes, targets."""
+    yamls = []
+    for section in plan.sections:
+    yamls.append(generate_yaml(section))  # via yaml_generator.py or real LLM
+    return yamls
+
+def phase_2_expand_sections(yamls):
+    """Expand each section via assigned LLM, using cached context."""
+    content = []
+    for yaml in yamls:
+        llm = yaml.assigned_model
+        section_text = expand_from_yaml(yaml, llm=llm, use_cache=True)
+        content.append(section_text)
+    return content
+
+def phase_3_refine_coherence(content):
+    """Polish narrative flow, argument structure, and tonal coherence."""
+    polished = []
+    for section in content:
+        coherent = enforce_coherence(section)  # coherence supervisor
+        refined = polish_argument(coherent)
+        toned = adjust_tone(refined)
+        polished.append(toned)
+    return polished
+
+def phase_4_compile_tex(polished):
+    """Format polished content into a .tex document with structure."""
+    doc = initialize_tex()
+    for section in polished:
+        doc.append(format_section(section))  # via writer.py or translator.py
+    return doc
+
+def phase_5_final_review(tex_document):
+    """Optional: stylistic and poetic pass by a purist LLM or human."""
+    reviewed = manual_review(tex_document)
+    return reviewed
+
+# Main pipeline execution
+
+if __name__ == "__main__":
+    plan = phase_0_prompt_intake()
+    yamls = phase_1_generate_structure(plan)
+    raw_content = phase_2_expand_sections(yamls)
+    refined = phase_3_refine_coherence(raw_content)
+    tex = phase_4_compile_tex(refined)
+    final_output = phase_5_final_review(tex)
+    save(final_output, "output/document.tex")
+				
+			\end{metaoutput}
+			
+		\end{document}
