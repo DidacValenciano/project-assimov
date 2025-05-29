@@ -1,0 +1,1 @@
+# Placeholder for structure_planner.py

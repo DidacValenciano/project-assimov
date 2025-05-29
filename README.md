@@ -19,33 +19,67 @@ The central engine, `grammarnaut`, acts as a semiotic compiler that transforms c
 ## 🛠️ Project Structure
 
 ```
-assimov/
-├── grammarnaut/                # Core engine module
-│   ├── __init__.py             # Module initializer
-│   ├── engine.py               # Main generation logic
-│   ├── tokenizer.py            # Custom token handling
-│   ├── discourse_planner.py    # Structure and coherence engine
-│   └── utils.py                # Helper functions
+project-assimov/
+├── config/
+│   └── config.yaml                   # Global configuration settings
 │
-├── prompts/                    # Prompt templates and discourse structures
-│   ├── base_templates.json     # Universal prompt templates
-│   ├── narrative_modes.yaml    # Descriptive styles and roles
-│   └── task_prompts.md         # Examples of prompts by task
+├── core/                             # Main execution pipeline (phased)
+│   ├── phase_0_gramaneute.py         # Parses the prompt and assigns roles/LLMs
+│   ├── phase_1_yaml_generator.py     # Generates section skeletons in YAML
+│   ├── phase_2_section_expander.py   # Expands sections based on YAML
+│   ├── phase_3_coherence_refiner.py  # Refines coherence, tone, argument
+│   ├── phase_4_tex_writer.py         # Compiles into LaTeX format
+│   ├── phase_5_final_polisher.py     # (Optional) Final stylistic touch
+│
+├── engine-grammarnaut/               # Core brain ("The Good Shepherd")
+│   ├── interpreter.py                # Interprets prompt: goals, tone, outputs
+│   ├── role_definitions.py           # Defines internal functional roles
+│   ├── role_assigner.py              # Assigns concrete roles to each task
+│   ├── llm_selector.py               # Filters available LLMs
+│   ├── llm_negotiator.py             # Chooses optimal LLM per task (cost/fit)
+│   ├── structure_planner.py          # Designs document structure and sections
+│   ├── report_builder.py             # Builds preview report for user review
+│   ├── orchestrator.py               # Manages phase-to-phase flow
+│   ├── planner.py                    # High-level generation strategy
+│   └── cache_manager.py              # Handles memory/cache/logging
+│
+├── enrichers/                        # Optional content enrichers
+│   ├── visionaut_api.py              # Adds charts or visual illustrations (e.g. DALL·E)
+│   ├── pictonaut_api.py              # Aesthetic illustrations, TikZ-style diagrams
+│   ├── tabulanaut_api.py             # Semantic table generation for LaTeX
+│   └── enrich_dispatcher.py          # Decides what/when/how to enrich
+│
+├── gui/
+│   ├── app.py                        # Flask/FastAPI WebGUI entry point
+│   └── templates/                    # HTML or Jinja templates
+│
+├── data/                             # Input prompts and structure definitions
+│   ├── example_prompt.txt
+│   ├── prompt_informe_tecnic.yaml
+│   ├── prompt_novel_cyberpunk.yaml
+│
+├── mocks/                            # Stub/mock modules for testing
+│   └── *.py
+│
+├── outputs/                          # Final outputs (LaTeX, PDF, etc.)
+│   ├── informe_tecnic.tex
+│   ├── novel_cyberpunk.tex
+│
+├── tests/                            # Unit/integration tests
+│   ├── test_phase_0.py
+│   ├── test_phase_1.py
+│   ├── test_phase_2.py
+│   └── fixtures/
+│       └── sample_prompt.yaml
 │
 ├── docs/                       # Technical and philosophical documentation
 │   ├── philosophy.md           # Conceptual foundation and homage to Asimov
 │   ├── architecture.md         # System design and module flow
 │   └── api_reference.md        # Usage and integration guide
 │
-├── tests/                      # Engine and logic tests
-│   ├── test_engine.py          # Unit tests for core engine
-│   ├── test_planner.py         # Tests for discourse logic
-│   └── fixtures/               # Sample inputs and expected outputs
-│       └── sample_prompt.json
-│
-├── LICENSE                     # Open-source license (e.g., GPLv3)
-├── README.md                   # Project overview and setup
-└── requirements.txt            # Python dependencies
+├── LICENSE                           # Licensing information (e.g. GPLv3)
+├── README.md                         # Project overview and setup guide
+└── requirements.txt                  # Python dependencies
 ```
 
 ---
